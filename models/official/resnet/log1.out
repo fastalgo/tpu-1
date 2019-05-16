@@ -1,0 +1,587 @@
+Removing gs://bert-pretrain-data/imagenet/infer/#1557960333967999...
+/ [1 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/checkpoint#1557960335107026...
+/ [2 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/events.out.tfevents.1557959528.v3-64-4tb#1557960892451500...
+/ [3 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/events.out.tfevents.1557959556.n-7cef505e-w-0.v2#1557960851515150...
+/ [4 objects]                                                                   
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m rm ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+Removing gs://bert-pretrain-data/imagenet/infer/graph.pbtxt#1557959542382637...
+/ [5 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.data-00000-of-00001#1557959549822506...
+/ [6 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.index#1557959550004626...
+/ [7 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.meta#1557959552476905...
+/ [8 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.data-00000-of-00001#1557960334316074...
+/ [9 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.index#1557960334528327...
+/ [10 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.meta#1557960336667176...
+/ [11 objects]                                                                  
+Operation completed over 11 objects.                                             
+/home/yangyouucb/tpu-1/models/hyperparameters/hyperparameters.py:123: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  overrides = yaml.load(f)
+I0515 22:56:40.173044 140624617088768 hyperparameters.py:100] 
+Model hyperparameters [source]:
+use_cache: 	True 	[default.yaml]
+train_steps: 	14074 	[Command-line flags]
+dropblock_groups: 	 	[default.yaml]
+eval_batch_size: 	1024 	[default.yaml]
+precision: 	bfloat16 	[default.yaml]
+weight_decay: 	0.0001 	[default.yaml]
+use_async_checkpointing: 	False 	[default.yaml]
+use_tpu: 	True 	[default.yaml]
+label_smoothing: 	0.0 	[default.yaml]
+resnet_depth: 	50 	[default.yaml]
+skip_host_call: 	False 	[default.yaml]
+train_batch_size: 	8192 	[Command-line flags]
+momentum: 	0.9 	[default.yaml]
+iterations_per_loop: 	1251 	[default.yaml]
+image_size: 	224 	[default.yaml]
+dropblock_keep_prob: 	0.9 	[default.yaml]
+num_parallel_calls: 	8 	[default.yaml]
+num_label_classes: 	1000 	[default.yaml]
+dropblock_size: 	7 	[default.yaml]
+base_learning_rate: 	0.1 	[default.yaml]
+data_format: 	channels_last 	[default.yaml]
+num_eval_images: 	50000 	[default.yaml]
+transpose_input: 	True 	[default.yaml]
+num_cores: 	64 	[Command-line flags]
+enable_lars: 	True 	[Command-line flags]
+num_train_images: 	1281167 	[default.yaml]
+poly_rate: 	0.0 	[default.yaml]
+
+W0515 22:56:40.190990 140624617088768 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0515 22:56:40.191744 140624617088768 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0515 22:56:40.246231 140624617088768 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/v3-64-4tb?alt=json
+I0515 22:56:40.246532 140624617088768 transport.py:157] Attempting refresh to obtain initial access_token
+W0515 22:56:40.366487 140624617088768 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0515 22:56:40.368263 140624617088768 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0515 22:56:40.415355 140624617088768 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/v3-64-4tb?alt=json
+I0515 22:56:40.415647 140624617088768 transport.py:157] Attempting refresh to obtain initial access_token
+I0515 22:56:40.747570 140624617088768 estimator.py:201] Using config: {'_eval_distribute': None, '_evaluation_master': 'grpc://10.240.1.180:8470', '_experimental_distribute': None, '_global_id_in_cluster': 0, '_master': 'grpc://10.240.1.180:8470', '_protocol': None, '_save_summary_steps': 100, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fe59b09cd68>, '_task_type': 'worker', '_keep_checkpoint_max': 5, '_task_id': 0, '_num_ps_replicas': 0, '_tpu_config': TPUConfig(iterations_per_loop=1251, num_shards=64, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None), '_session_config': graph_options {
+  rewrite_options {
+    disable_meta_optimizer: true
+  }
+}
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.180:8470"
+    }
+    tasks {
+      key: 1
+      value: "10.240.1.178:8470"
+    }
+    tasks {
+      key: 2
+      value: "10.240.1.181:8470"
+    }
+    tasks {
+      key: 3
+      value: "10.240.1.184:8470"
+    }
+    tasks {
+      key: 4
+      value: "10.240.1.179:8470"
+    }
+    tasks {
+      key: 5
+      value: "10.240.1.185:8470"
+    }
+    tasks {
+      key: 6
+      value: "10.240.1.183:8470"
+    }
+    tasks {
+      key: 7
+      value: "10.240.1.182:8470"
+    }
+  }
+}
+, '_save_checkpoints_steps': 5000, '_device_fn': None, '_model_dir': 'gs://bert-pretrain-data/imagenet/infer/', '_keep_checkpoint_every_n_hours': 10000, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7fe59aed9128>, '_tf_random_seed': None, '_is_chief': True, '_service': None, '_num_worker_replicas': 1, '_train_distribute': None, '_save_checkpoints_secs': None, '_log_step_count_steps': None}
+I0515 22:56:40.748015 140624617088768 tpu_context.py:202] _TPUContext: eval_on_tpu True
+I0515 22:56:40.748471 140624617088768 resnet_main.py:598] Precision: bfloat16
+I0515 22:56:40.748610 140624617088768 resnet_main.py:617] Using dataset: gs://bert-pretrain-data/imagenet/imagenet-2012-tfrecord/
+I0515 22:56:40.879783 140624617088768 resnet_main.py:670] Training for 14074 steps (90.22 epochs in total). Current step 0.
+I0515 22:56:40.997536 140624617088768 tpu_system_metadata.py:59] Querying Tensorflow master (grpc://10.240.1.180:8470) for TPU system metadata.
+2019-05-15 22:56:41.000502: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+I0515 22:56:41.033162 140624617088768 tpu_system_metadata.py:120] Found TPU system:
+I0515 22:56:41.033435 140624617088768 tpu_system_metadata.py:121] *** Num TPU Cores: 64
+I0515 22:56:41.033920 140624617088768 tpu_system_metadata.py:122] *** Num TPU Workers: 8
+I0515 22:56:41.033981 140624617088768 tpu_system_metadata.py:124] *** Num TPU Cores Per Worker: 8
+I0515 22:56:41.034035 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 2820178859957775172)
+I0515 22:56:41.034275 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 13732020765929608197)
+I0515 22:56:41.034341 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 7622213616663427716)
+I0515 22:56:41.034394 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 17966088247940653669)
+I0515 22:56:41.034444 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 6184262826509945169)
+I0515 22:56:41.034492 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 7282308567223618737)
+I0515 22:56:41.034541 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 6779097012615225299)
+I0515 22:56:41.034588 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 3778218325931803250)
+I0515 22:56:41.034636 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 9559316629875724152)
+I0515 22:56:41.034704 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 6544001410460982665)
+I0515 22:56:41.034766 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 531393823275751098)
+I0515 22:56:41.034834 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:CPU:0, CPU, -1, 3848477348454434572)
+I0515 22:56:41.034888 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:XLA_CPU:0, XLA_CPU, 17179869184, 14811366519076250353)
+I0515 22:56:41.034937 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:0, TPU, 17179869184, 13958887647378951980)
+I0515 22:56:41.034985 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:1, TPU, 17179869184, 18097771572312879880)
+I0515 22:56:41.035033 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:2, TPU, 17179869184, 3983848003291086268)
+I0515 22:56:41.035080 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:3, TPU, 17179869184, 7638836775938027298)
+I0515 22:56:41.035127 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:4, TPU, 17179869184, 18239388122836864352)
+I0515 22:56:41.035174 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:5, TPU, 17179869184, 3564497537452367522)
+I0515 22:56:41.035222 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:6, TPU, 17179869184, 3546215355056542460)
+I0515 22:56:41.035269 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:7, TPU, 17179869184, 8972579395659073818)
+I0515 22:56:41.035327 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 5603140547989527936)
+I0515 22:56:41.035376 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:CPU:0, CPU, -1, 3720619313436952474)
+I0515 22:56:41.035424 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:XLA_CPU:0, XLA_CPU, 17179869184, 1092515637272283035)
+I0515 22:56:41.035472 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:0, TPU, 17179869184, 1166970453821256190)
+I0515 22:56:41.035519 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:1, TPU, 17179869184, 3647772474496170690)
+I0515 22:56:41.035566 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:2, TPU, 17179869184, 13657477031661354568)
+I0515 22:56:41.035613 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:3, TPU, 17179869184, 10273433667718972852)
+I0515 22:56:41.035660 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:4, TPU, 17179869184, 12699679145622778621)
+I0515 22:56:41.035707 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:5, TPU, 17179869184, 6649948106656892111)
+I0515 22:56:41.035774 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:6, TPU, 17179869184, 1375185567063983108)
+I0515 22:56:41.035843 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:7, TPU, 17179869184, 3451922344195583201)
+I0515 22:56:41.035892 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 6409340960030849104)
+I0515 22:56:41.035940 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:CPU:0, CPU, -1, 2012823925916292760)
+I0515 22:56:41.035988 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:XLA_CPU:0, XLA_CPU, 17179869184, 17187020596528457314)
+I0515 22:56:41.036035 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:0, TPU, 17179869184, 18188776563918627633)
+I0515 22:56:41.036082 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:1, TPU, 17179869184, 6138339589422681871)
+I0515 22:56:41.036128 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:2, TPU, 17179869184, 13621330621064171396)
+I0515 22:56:41.036175 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:3, TPU, 17179869184, 10981156327640356309)
+I0515 22:56:41.036229 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:4, TPU, 17179869184, 9169850994252460332)
+I0515 22:56:41.036277 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:5, TPU, 17179869184, 8163462088833952886)
+I0515 22:56:41.036330 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:6, TPU, 17179869184, 2926888275869130237)
+I0515 22:56:41.036378 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:7, TPU, 17179869184, 10005183943175246586)
+I0515 22:56:41.036425 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 13890276510499980170)
+I0515 22:56:41.036473 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:CPU:0, CPU, -1, 3269934438266134822)
+I0515 22:56:41.036519 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:XLA_CPU:0, XLA_CPU, 17179869184, 16670124127912007275)
+I0515 22:56:41.036570 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:0, TPU, 17179869184, 18274985617409654097)
+I0515 22:56:41.036628 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:1, TPU, 17179869184, 3369307947303208944)
+I0515 22:56:41.036674 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:2, TPU, 17179869184, 10602182275587413095)
+I0515 22:56:41.036720 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:3, TPU, 17179869184, 11026399508796094888)
+I0515 22:56:41.036779 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:4, TPU, 17179869184, 18201613861634062286)
+I0515 22:56:41.036956 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:5, TPU, 17179869184, 975886697494237590)
+I0515 22:56:41.037109 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:6, TPU, 17179869184, 6502230794022987185)
+I0515 22:56:41.037163 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:7, TPU, 17179869184, 3624978036813481991)
+I0515 22:56:41.037211 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 5646002544012212722)
+I0515 22:56:41.037259 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:CPU:0, CPU, -1, 3334670248315637436)
+I0515 22:56:41.037307 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:XLA_CPU:0, XLA_CPU, 17179869184, 5487407215926259564)
+I0515 22:56:41.037359 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:0, TPU, 17179869184, 12776048597676943607)
+I0515 22:56:41.037406 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:1, TPU, 17179869184, 3619280317034718645)
+I0515 22:56:41.037453 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:2, TPU, 17179869184, 17930883732662025872)
+I0515 22:56:41.037499 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:3, TPU, 17179869184, 9954883880359208926)
+I0515 22:56:41.037547 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:4, TPU, 17179869184, 11740852691653466020)
+I0515 22:56:41.037593 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:5, TPU, 17179869184, 14222181352287856990)
+I0515 22:56:41.037640 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:6, TPU, 17179869184, 3201925422847433297)
+I0515 22:56:41.037687 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:7, TPU, 17179869184, 6031994406375302804)
+I0515 22:56:41.037734 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 12420998757014766605)
+I0515 22:56:41.037796 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:CPU:0, CPU, -1, 10695344463261928307)
+I0515 22:56:41.037851 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:XLA_CPU:0, XLA_CPU, 17179869184, 1605797391249364609)
+I0515 22:56:41.037898 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:0, TPU, 17179869184, 4732342066183537167)
+I0515 22:56:41.037945 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:1, TPU, 17179869184, 5650084867836613654)
+I0515 22:56:41.037992 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:2, TPU, 17179869184, 5537626112561972712)
+I0515 22:56:41.038039 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:3, TPU, 17179869184, 4358322155463677100)
+I0515 22:56:41.038085 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:4, TPU, 17179869184, 10218287828731457209)
+I0515 22:56:41.038134 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:5, TPU, 17179869184, 8596997315867636870)
+I0515 22:56:41.038192 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:6, TPU, 17179869184, 11491195210514624470)
+I0515 22:56:41.038241 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:7, TPU, 17179869184, 10346904376233237680)
+I0515 22:56:41.038297 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 6718389490836589099)
+I0515 22:56:41.038349 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:CPU:0, CPU, -1, 17073729294351776647)
+I0515 22:56:41.038397 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:XLA_CPU:0, XLA_CPU, 17179869184, 8864116385458341100)
+I0515 22:56:41.038444 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:0, TPU, 17179869184, 8842732699064834571)
+I0515 22:56:41.038491 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:1, TPU, 17179869184, 16596218965455720288)
+I0515 22:56:41.038538 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:2, TPU, 17179869184, 6207231918796889208)
+I0515 22:56:41.038585 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:3, TPU, 17179869184, 31079948229728117)
+I0515 22:56:41.038631 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:4, TPU, 17179869184, 1618133782839928629)
+I0515 22:56:41.038678 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:5, TPU, 17179869184, 12712811515482414011)
+I0515 22:56:41.038725 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:6, TPU, 17179869184, 12282903537318239953)
+I0515 22:56:41.038783 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:7, TPU, 17179869184, 7648446562677485660)
+I0515 22:56:41.038836 140624617088768 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 4212793266727527411)
+W0515 22:56:41.043864 140624617088768 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+I0515 22:56:41.057008 140624617088768 estimator.py:1111] Calling model_fn.
+W0515 22:56:41.070514 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:294: DatasetV1.shard (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `dataset.apply(tf.data.experimental.filter_for_shard(...))`.
+W0515 22:56:41.093082 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:307: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0515 22:56:41.105968 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:311: shuffle_and_repeat (from tensorflow.contrib.data.python.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.shuffle_and_repeat(...)`.
+W0515 22:56:41.108474 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:177: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+W0515 22:56:41.117761 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_preprocessing.py:66: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W0515 22:56:42.634391 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:208: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0515 22:56:42.651094 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:67: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+W0515 22:56:42.695386 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:410: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0515 22:56:46.233036 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:439: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.average_pooling2d instead.
+W0515 22:56:46.237636 140624617088768 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:446: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0515 22:56:46.300093 140624617088768 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0515 22:56:46.585329 140624617088768 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+I0515 22:56:46.593060 140624617088768 lars_util.py:93] ***************** I am using LARS optimizer *****************
+I0515 22:56:54.374581 140624617088768 basic_session_run_hooks.py:527] Create CheckpointSaverHook.
+I0515 22:56:54.722837 140624617088768 estimator.py:1113] Done calling model_fn.
+I0515 22:56:57.764295 140624617088768 tpu_estimator.py:447] TPU job name worker
+I0515 22:56:59.030284 140624617088768 monitored_session.py:222] Graph was finalized.
+I0515 22:57:03.993819 140624617088768 session_manager.py:491] Running local_init_op.
+I0515 22:57:04.182189 140624617088768 session_manager.py:493] Done running local_init_op.
+I0515 22:57:13.252681 140624617088768 basic_session_run_hooks.py:594] Saving checkpoints for 0 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0515 22:57:21.276373 140624617088768 util.py:51] Initialized dataset iterators in 0 seconds
+I0515 22:57:21.277216 140624617088768 session_support.py:345] Installing graceful shutdown hook.
+2019-05-15 22:57:21.277773: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+I0515 22:57:21.289549 140624617088768 session_support.py:102] Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:2/device:CPU:0', '/job:worker/replica:0/task:1/device:CPU:0', '/job:worker/replica:0/task:3/device:CPU:0', '/job:worker/replica:0/task:5/device:CPU:0', '/job:worker/replica:0/task:4/device:CPU:0', '/job:worker/replica:0/task:6/device:CPU:0', '/job:worker/replica:0/task:7/device:CPU:0']
+I0515 22:57:21.459853 140624617088768 session_support.py:130] Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+I0515 22:57:21.469387 140624617088768 tpu_estimator.py:504] Init TPU system
+I0515 22:57:23.497953 140624617088768 tpu_estimator.py:510] Initialized TPU in 2 seconds
+I0515 22:57:23.966881 140623255598848 tpu_estimator.py:463] Starting infeed thread controller.
+I0515 22:57:23.967500 140623247206144 tpu_estimator.py:482] Starting outfeed thread controller.
+I0515 22:57:24.159798 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 22:57:24.160576 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:01:04.905341 140624617088768 basic_session_run_hooks.py:249] loss = 3.7864552, step = 1251
+I0515 23:01:04.908661 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:01:04.909032 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:04:09.974527 140624617088768 basic_session_run_hooks.py:247] loss = 3.3822885, step = 2502 (185.069 sec)
+I0515 23:04:09.976204 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.75964
+I0515 23:04:09.976890 140624617088768 tpu_estimator.py:1859] examples/sec: 55375
+I0515 23:04:10.612107 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:04:10.612664 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:07:15.316129 140624617088768 basic_session_run_hooks.py:247] loss = 2.7957706, step = 3753 (185.342 sec)
+I0515 23:07:15.317679 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.7497
+I0515 23:07:16.107787 140624617088768 tpu_estimator.py:1859] examples/sec: 55293.6
+I0515 23:07:16.110039 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:07:16.110321 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:10:19.582989 140624617088768 basic_session_run_hooks.py:594] Saving checkpoints for 5004 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0515 23:10:26.878750 140624617088768 basic_session_run_hooks.py:247] loss = 2.339721, step = 5004 (191.563 sec)
+I0515 23:10:26.880375 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.5305
+I0515 23:10:26.880600 140624617088768 tpu_estimator.py:1859] examples/sec: 53497.9
+I0515 23:10:26.881709 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:10:26.881951 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:13:30.333968 140624617088768 basic_session_run_hooks.py:247] loss = 2.0097303, step = 6255 (183.455 sec)
+I0515 23:13:30.335401 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.81911
+I0515 23:13:30.335607 140624617088768 tpu_estimator.py:1859] examples/sec: 55862.2
+I0515 23:13:31.103591 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:13:31.104158 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:16:34.341015 140624617088768 basic_session_run_hooks.py:247] loss = 1.779485, step = 7506 (184.007 sec)
+I0515 23:16:34.342861 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.79864
+I0515 23:16:34.343110 140624617088768 tpu_estimator.py:1859] examples/sec: 55694.4
+I0515 23:16:35.002287 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:16:35.003097 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:19:39.005447 140624617088768 basic_session_run_hooks.py:247] loss = 1.5359125, step = 8757 (184.664 sec)
+I0515 23:19:39.007062 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.77446
+I0515 23:19:39.007560 140624617088768 tpu_estimator.py:1859] examples/sec: 55496.4
+I0515 23:19:39.008937 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:19:39.009280 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:22:44.737569 140624617088768 basic_session_run_hooks.py:594] Saving checkpoints for 10008 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0515 23:22:52.577813 140624617088768 basic_session_run_hooks.py:247] loss = 1.7622261, step = 10008 (193.572 sec)
+I0515 23:22:52.579346 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.4627
+I0515 23:22:52.579769 140624617088768 tpu_estimator.py:1859] examples/sec: 52942.5
+I0515 23:22:52.581103 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:22:52.581307 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:25:56.193818 140624617088768 basic_session_run_hooks.py:247] loss = 1.3148224, step = 11259 (183.616 sec)
+I0515 23:25:56.195561 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.81312
+I0515 23:25:56.872475 140624617088768 tpu_estimator.py:1859] examples/sec: 55813.1
+I0515 23:25:56.874592 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:25:56.874892 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:29:01.218130 140624617088768 basic_session_run_hooks.py:247] loss = 1.2734665, step = 12510 (185.024 sec)
+I0515 23:29:01.219588 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.76128
+I0515 23:29:01.220050 140624617088768 tpu_estimator.py:1859] examples/sec: 55388.4
+I0515 23:29:01.221175 140624617088768 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0515 23:29:01.221359 140624617088768 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0515 23:32:03.826012 140624617088768 basic_session_run_hooks.py:247] loss = 1.133275, step = 13761 (182.608 sec)
+I0515 23:32:03.827608 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.85074
+I0515 23:32:04.538867 140624617088768 tpu_estimator.py:1859] examples/sec: 56121.3
+I0515 23:32:04.540765 140624617088768 tpu_estimator.py:536] Enqueue next (313) batch(es) of data to infeed.
+I0515 23:32:04.541006 140624617088768 tpu_estimator.py:540] Dequeue next (313) batch(es) of data from outfeed.
+I0515 23:32:50.826410 140624617088768 basic_session_run_hooks.py:247] loss = 1.0380409, step = 14074 (47.000 sec)
+I0515 23:32:50.828158 140624617088768 tpu_estimator.py:1858] global_step/sec: 6.65951
+I0515 23:32:50.828577 140624617088768 tpu_estimator.py:1859] examples/sec: 54554.7
+I0515 23:32:50.829967 140624617088768 basic_session_run_hooks.py:594] Saving checkpoints for 14074 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0515 23:32:58.060122 140624617088768 tpu_estimator.py:545] Stop infeed thread controller
+I0515 23:32:58.060461 140624617088768 tpu_estimator.py:392] Shutting down InfeedController thread.
+I0515 23:32:58.060694 140623255598848 tpu_estimator.py:387] InfeedController received shutdown signal, stopping.
+I0515 23:32:58.060813 140623255598848 tpu_estimator.py:479] Infeed thread finished, shutting down.
+I0515 23:32:58.060966 140624617088768 error_handling.py:93] infeed marked as finished
+I0515 23:32:58.061113 140624617088768 tpu_estimator.py:549] Stop output thread controller
+I0515 23:32:58.061180 140624617088768 tpu_estimator.py:392] Shutting down OutfeedController thread.
+I0515 23:32:58.061316 140623247206144 tpu_estimator.py:387] OutfeedController received shutdown signal, stopping.
+I0515 23:32:58.061398 140623247206144 tpu_estimator.py:488] Outfeed thread finished, shutting down.
+I0515 23:32:58.061517 140624617088768 error_handling.py:93] outfeed marked as finished
+I0515 23:32:58.061585 140624617088768 tpu_estimator.py:553] Shutdown TPU system.
+I0515 23:32:59.481876 140624617088768 estimator.py:359] Loss for final step: 1.0380409.
+I0515 23:32:59.482692 140624617088768 error_handling.py:93] training_loop marked as finished
+/home/yangyouucb/tpu-1/models/hyperparameters/hyperparameters.py:123: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  overrides = yaml.load(f)
+I0515 23:33:03.070139 140527465518848 hyperparameters.py:100] 
+Model hyperparameters [source]:
+iterations_per_loop: 	1251 	[default.yaml]
+use_cache: 	True 	[default.yaml]
+base_learning_rate: 	0.1 	[default.yaml]
+poly_rate: 	0.0 	[default.yaml]
+dropblock_size: 	7 	[default.yaml]
+precision: 	bfloat16 	[default.yaml]
+dropblock_keep_prob: 	0.9 	[default.yaml]
+label_smoothing: 	0.0 	[default.yaml]
+train_steps: 	14074 	[Command-line flags]
+dropblock_groups: 	 	[default.yaml]
+eval_batch_size: 	1024 	[default.yaml]
+skip_host_call: 	False 	[default.yaml]
+enable_lars: 	True 	[Command-line flags]
+num_train_images: 	1281167 	[default.yaml]
+transpose_input: 	True 	[default.yaml]
+num_eval_images: 	50000 	[default.yaml]
+weight_decay: 	0.0001 	[default.yaml]
+num_cores: 	8 	[Command-line flags]
+data_format: 	channels_last 	[default.yaml]
+train_batch_size: 	8192 	[Command-line flags]
+num_parallel_calls: 	8 	[default.yaml]
+use_async_checkpointing: 	False 	[default.yaml]
+resnet_depth: 	50 	[default.yaml]
+num_label_classes: 	1000 	[default.yaml]
+image_size: 	224 	[default.yaml]
+use_tpu: 	True 	[default.yaml]
+momentum: 	0.9 	[default.yaml]
+
+W0515 23:33:03.090259 140527465518848 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0515 23:33:03.090885 140527465518848 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0515 23:33:03.186509 140527465518848 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/infer?alt=json
+I0515 23:33:03.186820 140527465518848 transport.py:157] Attempting refresh to obtain initial access_token
+W0515 23:33:03.409501 140527465518848 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0515 23:33:03.411439 140527465518848 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0515 23:33:03.504385 140527465518848 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/infer?alt=json
+I0515 23:33:03.504677 140527465518848 transport.py:157] Attempting refresh to obtain initial access_token
+I0515 23:33:03.645035 140527465518848 estimator.py:201] Using config: {'_service': None, '_protocol': None, '_save_checkpoints_steps': 5000, '_session_config': graph_options {
+  rewrite_options {
+    disable_meta_optimizer: true
+  }
+}
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+, '_evaluation_master': 'grpc://10.240.1.2:8470', '_save_summary_steps': 100, '_experimental_distribute': None, '_keep_checkpoint_every_n_hours': 10000, '_save_checkpoints_secs': None, '_log_step_count_steps': None, '_task_type': 'worker', '_is_chief': True, '_eval_distribute': None, '_num_ps_replicas': 0, '_train_distribute': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fcefc3ecda0>, '_num_worker_replicas': 1, '_global_id_in_cluster': 0, '_tf_random_seed': None, '_keep_checkpoint_max': 5, '_master': 'grpc://10.240.1.2:8470', '_device_fn': None, '_model_dir': 'gs://bert-pretrain-data/imagenet/infer/', '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7fcefc5a4160>, '_task_id': 0, '_tpu_config': TPUConfig(iterations_per_loop=1251, num_shards=8, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None)}
+I0515 23:33:03.645485 140527465518848 tpu_context.py:202] _TPUContext: eval_on_tpu True
+I0515 23:33:03.645985 140527465518848 resnet_main.py:598] Precision: bfloat16
+I0515 23:33:03.646063 140527465518848 resnet_main.py:617] Using dataset: gs://bert-pretrain-data/imagenet/imagenet-2012-tfrecord/
+I0515 23:33:03.646165 140527465518848 evaluation.py:189] Waiting for new checkpoint at gs://bert-pretrain-data/imagenet/infer/
+I0515 23:33:03.939878 140527465518848 evaluation.py:198] Found new checkpoint at gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074
+I0515 23:33:03.940172 140527465518848 resnet_main.py:637] Starting to evaluate.
+I0515 23:33:03.940534 140527465518848 tpu_system_metadata.py:59] Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+2019-05-15 23:33:03.941835: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+I0515 23:33:03.955122 140527465518848 tpu_system_metadata.py:120] Found TPU system:
+I0515 23:33:03.955481 140527465518848 tpu_system_metadata.py:121] *** Num TPU Cores: 8
+I0515 23:33:03.955971 140527465518848 tpu_system_metadata.py:122] *** Num TPU Workers: 1
+I0515 23:33:03.956032 140527465518848 tpu_system_metadata.py:124] *** Num TPU Cores Per Worker: 8
+I0515 23:33:03.956085 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 1130030368197321852)
+I0515 23:33:03.956323 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 16023952595259851910)
+I0515 23:33:03.956373 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 7052000204402630420)
+I0515 23:33:03.956419 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 6588153574727704724)
+I0515 23:33:03.956463 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 5661462193611808915)
+I0515 23:33:03.956506 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 3526009862257658397)
+I0515 23:33:03.956547 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 17603325769432102874)
+I0515 23:33:03.956589 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 2662801170652654041)
+I0515 23:33:03.956631 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 5170492752051326006)
+I0515 23:33:03.956673 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 12492883679459729125)
+I0515 23:33:03.956714 140527465518848 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 9488578616273956858)
+W0515 23:33:03.961461 140527465518848 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+I0515 23:33:03.964292 140527465518848 estimator.py:1111] Calling model_fn.
+W0515 23:33:03.977315 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:294: DatasetV1.shard (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `dataset.apply(tf.data.experimental.filter_for_shard(...))`.
+W0515 23:33:03.998615 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:307: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0515 23:33:04.012715 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:177: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+W0515 23:33:04.158141 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:208: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0515 23:33:04.182375 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:67: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+W0515 23:33:04.215245 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:410: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0515 23:33:07.067162 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:439: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.average_pooling2d instead.
+W0515 23:33:07.071829 140527465518848 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:446: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0515 23:33:07.135668 140527465518848 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0515 23:33:07.261840 140527465518848 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py:2655: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+I0515 23:33:07.730671 140527465518848 estimator.py:1113] Done calling model_fn.
+I0515 23:33:07.748583 140527465518848 evaluation.py:257] Starting evaluation at 2019-05-15T23:33:07Z
+I0515 23:33:07.748890 140527465518848 tpu_estimator.py:447] TPU job name worker
+I0515 23:33:08.440539 140527465518848 monitored_session.py:222] Graph was finalized.
+W0515 23:33:08.441368 140527465518848 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I0515 23:33:08.490547 140527465518848 saver.py:1270] Restoring parameters from gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074
+I0515 23:33:10.327786 140527465518848 session_manager.py:491] Running local_init_op.
+I0515 23:33:10.359421 140527465518848 session_manager.py:493] Done running local_init_op.
+I0515 23:33:10.418987 140527465518848 tpu_estimator.py:504] Init TPU system
+I0515 23:33:12.911118 140527465518848 tpu_estimator.py:510] Initialized TPU in 2 seconds
+I0515 23:33:12.912369 140526530057984 tpu_estimator.py:463] Starting infeed thread controller.
+I0515 23:33:12.912840 140526521665280 tpu_estimator.py:482] Starting outfeed thread controller.
+I0515 23:33:13.169470 140527465518848 util.py:51] Initialized dataset iterators in 0 seconds
+I0515 23:33:13.191455 140527465518848 tpu_estimator.py:536] Enqueue next (48) batch(es) of data to infeed.
+I0515 23:33:13.192209 140527465518848 tpu_estimator.py:540] Dequeue next (48) batch(es) of data from outfeed.
+I0515 23:33:30.606483 140527465518848 evaluation.py:169] Evaluation [48/48]
+I0515 23:33:30.606853 140527465518848 tpu_estimator.py:545] Stop infeed thread controller
+I0515 23:33:30.606932 140527465518848 tpu_estimator.py:392] Shutting down InfeedController thread.
+I0515 23:33:30.607118 140526530057984 tpu_estimator.py:387] InfeedController received shutdown signal, stopping.
+I0515 23:33:30.607215 140526530057984 tpu_estimator.py:479] Infeed thread finished, shutting down.
+I0515 23:33:30.607352 140527465518848 error_handling.py:93] infeed marked as finished
+I0515 23:33:30.607481 140527465518848 tpu_estimator.py:549] Stop output thread controller
+I0515 23:33:30.607565 140527465518848 tpu_estimator.py:392] Shutting down OutfeedController thread.
+I0515 23:33:30.607682 140526521665280 tpu_estimator.py:387] OutfeedController received shutdown signal, stopping.
+I0515 23:33:30.607764 140526521665280 tpu_estimator.py:488] Outfeed thread finished, shutting down.
+I0515 23:33:30.607958 140527465518848 error_handling.py:93] outfeed marked as finished
+I0515 23:33:30.608047 140527465518848 tpu_estimator.py:553] Shutdown TPU system.
+I0515 23:33:30.776769 140527465518848 evaluation.py:277] Finished evaluation at 2019-05-15-23:33:30
+I0515 23:33:30.777217 140527465518848 estimator.py:1979] Saving dict for global step 14074: global_step = 14074, loss = 1.3622799, top_1_accuracy = 0.7611084, top_5_accuracy = 0.92911786
+I0515 23:33:32.633820 140527465518848 estimator.py:2039] Saving 'checkpoint_path' summary for global step 14074: gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074
+I0515 23:33:32.928441 140527465518848 error_handling.py:93] evaluation_loop marked as finished
+I0515 23:33:32.928827 140527465518848 resnet_main.py:646] Eval results: {'top_1_accuracy': 0.7611084, 'top_5_accuracy': 0.92911786, 'loss': 1.3622799, 'global_step': 14074}. Elapsed seconds: 28
+I0515 23:33:32.928948 140527465518848 resnet_main.py:652] Evaluation finished after training step 14074

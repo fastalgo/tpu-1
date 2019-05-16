@@ -40,8 +40,21 @@ def poly_rate_schedule(current_epoch,
   Returns:
     A scaled `Tensor` for current learning rate.
   """
-
-  if params['train_batch_size'] <= 16384:
+# Please check Table 3 of https://arxiv.org/pdf/1901.08256v1.pdf
+  if params['train_batch_size'] <= 1024:
+    plr = 5.65685424949 # 16/(sqrt)^3
+    w_epochs = 1 # 5/(2^4)
+  elif params['train_batch_size'] == 2048:
+    plr = 8.0 # 16/(sqrt2)^2
+    w_epochs = 1 # 5/2^3
+  elif params['train_batch_size'] == 4096:
+    plr = 11.313708499 # 16/sqrt2
+    w_epochs = 1 # 5/2^2
+  elif params['train_batch_size'] == 8192:
+    #plr = 16.0 # 16/(sqrt2)^0
+    plr = 20.0 # 16/(sqrt2)^0
+    w_epochs = 3 # 5/2^1
+  elif params['train_batch_size'] == 16384:
     plr = 25.0
     w_epochs = 5
   elif params['train_batch_size'] == 32768:
@@ -78,6 +91,7 @@ def init_lars_optimizer(current_epoch, params):
   """Initialize the LARS Optimizer."""
 
   learning_rate = poly_rate_schedule(current_epoch, params)
+  tf.logging.info("***************** I am using LARS optimizer *****************")
   optimizer = tf.contrib.opt.LARSOptimizer(
       learning_rate,
       momentum=params['momentum'],
