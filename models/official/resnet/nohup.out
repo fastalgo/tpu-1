@@ -945,3 +945,491 @@ I0516 00:23:54.717709 140316272817920 estimator.py:2039] Saving 'checkpoint_path
 I0516 00:23:54.987758 140316272817920 error_handling.py:93] evaluation_loop marked as finished
 I0516 00:23:54.988175 140316272817920 resnet_main.py:646] Eval results: {'top_1_accuracy': 0.7620239, 'top_5_accuracy': 0.93033856, 'loss': 1.3315437, 'global_step': 14074}. Elapsed seconds: 30
 I0516 00:23:54.988302 140316272817920 resnet_main.py:652] Evaluation finished after training step 14074
+Removing gs://bert-pretrain-data/imagenet/infer/#1557966192871874...
+/ [1 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/checkpoint#1557966193975382...
+/ [2 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/events.out.tfevents.1557964296.n-7cef505e-w-0.v2#1557965370912637...
+/ [3 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/events.out.tfevents.1557965368.v3-256-4tb#1557966197228139...
+/ [4 objects]                                                                   
+==> NOTE: You are performing a sequence of gsutil operations that may
+run significantly faster if you instead use gsutil -m rm ... Please
+see the -m section under "gsutil help options" for further information
+about when gsutil -m can be advantageous.
+
+Removing gs://bert-pretrain-data/imagenet/infer/events.out.tfevents.1557965413.n-f47f4440-w-0.v2#1557966197784654...
+/ [5 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/graph.pbtxt#1557965386585812...
+/ [6 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.data-00000-of-00001#1557965394615363...
+/ [7 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.index#1557965394807484...
+/ [8 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-0.meta#1557965397632143...
+/ [9 objects]                                                                   Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-10008.data-00000-of-00001#1557965978710406...
+/ [10 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-10008.index#1557965979142928...
+/ [11 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-10008.meta#1557965982707512...
+/ [12 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074.data-00000-of-00001#1557966193189172...
+/ [13 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074.index#1557966193388152...
+/ [14 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-14074.meta#1557966195982201...
+/ [15 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.data-00000-of-00001#1557965718511295...
+/ [16 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.index#1557965718690156...
+/ [17 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/model.ckpt-5004.meta#1557965721133546...
+/ [18 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/eval/#1557966233144484...
+/ [19 objects]                                                                  Removing gs://bert-pretrain-data/imagenet/infer/eval/events.out.tfevents.1557966233.v3-256-4tb#1557966234914865...
+/ [20 objects]                                                                  
+Operation completed over 20 objects.                                             
+/home/yangyouucb/tpu-1/models/hyperparameters/hyperparameters.py:123: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  overrides = yaml.load(f)
+I0517 21:03:03.383610 140278747670272 hyperparameters.py:100] 
+Model hyperparameters [source]:
+train_batch_size: 	4096 	[Command-line flags]
+train_steps: 	14074 	[Command-line flags]
+dropblock_keep_prob: 	0.9 	[default.yaml]
+momentum: 	0.9 	[default.yaml]
+precision: 	bfloat16 	[default.yaml]
+num_eval_images: 	50000 	[default.yaml]
+base_learning_rate: 	0.1 	[default.yaml]
+dropblock_groups: 	 	[default.yaml]
+label_smoothing: 	0.0 	[default.yaml]
+resnet_depth: 	50 	[default.yaml]
+eval_batch_size: 	1024 	[default.yaml]
+use_tpu: 	True 	[default.yaml]
+num_train_images: 	1281167 	[default.yaml]
+use_async_checkpointing: 	False 	[default.yaml]
+skip_host_call: 	False 	[default.yaml]
+num_cores: 	128 	[Command-line flags]
+poly_rate: 	0.0 	[default.yaml]
+num_label_classes: 	1000 	[default.yaml]
+image_size: 	224 	[default.yaml]
+num_parallel_calls: 	8 	[default.yaml]
+use_cache: 	True 	[default.yaml]
+data_format: 	channels_last 	[default.yaml]
+iterations_per_loop: 	1251 	[default.yaml]
+enable_lars: 	True 	[Command-line flags]
+weight_decay: 	0.0001 	[default.yaml]
+transpose_input: 	True 	[default.yaml]
+dropblock_size: 	7 	[default.yaml]
+
+W0517 21:03:03.401402 140278747670272 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0517 21:03:03.402117 140278747670272 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0517 21:03:03.506084 140278747670272 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/v3-128-4tb?alt=json
+I0517 21:03:03.506404 140278747670272 transport.py:157] Attempting refresh to obtain initial access_token
+W0517 21:03:03.805630 140278747670272 __init__.py:44] file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
+    from google.appengine.api import memcache
+ImportError: No module named 'google.appengine'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ImportError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ImportError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
+    from . import file_cache
+  File "/usr/local/lib/python3.5/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
+    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+I0517 21:03:03.806225 140278747670272 discovery.py:272] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1alpha1/rest
+I0517 21:03:03.854843 140278747670272 discovery.py:873] URL being requested: GET https://tpu.googleapis.com/v1alpha1/projects/cloud-tpu-colab-integration/locations/europe-west4-a/nodes/v3-128-4tb?alt=json
+I0517 21:03:03.855156 140278747670272 transport.py:157] Attempting refresh to obtain initial access_token
+I0517 21:03:04.038738 140278747670272 estimator.py:201] Using config: {'_protocol': None, '_save_summary_steps': 100, '_experimental_distribute': None, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7f95138b1f28>, '_model_dir': 'gs://bert-pretrain-data/imagenet/infer/', '_num_worker_replicas': 1, '_tf_random_seed': None, '_evaluation_master': 'grpc://10.240.1.71:8470', '_task_type': 'worker', '_service': None, '_device_fn': None, '_train_distribute': None, '_session_config': graph_options {
+  rewrite_options {
+    disable_meta_optimizer: true
+  }
+}
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.71:8470"
+    }
+    tasks {
+      key: 1
+      value: "10.240.1.79:8470"
+    }
+    tasks {
+      key: 2
+      value: "10.240.1.69:8470"
+    }
+    tasks {
+      key: 3
+      value: "10.240.1.78:8470"
+    }
+    tasks {
+      key: 4
+      value: "10.240.1.80:8470"
+    }
+    tasks {
+      key: 5
+      value: "10.240.1.70:8470"
+    }
+    tasks {
+      key: 6
+      value: "10.240.1.81:8470"
+    }
+    tasks {
+      key: 7
+      value: "10.240.1.72:8470"
+    }
+    tasks {
+      key: 8
+      value: "10.240.1.68:8470"
+    }
+    tasks {
+      key: 9
+      value: "10.240.1.73:8470"
+    }
+    tasks {
+      key: 10
+      value: "10.240.1.66:8470"
+    }
+    tasks {
+      key: 11
+      value: "10.240.1.67:8470"
+    }
+    tasks {
+      key: 12
+      value: "10.240.1.74:8470"
+    }
+    tasks {
+      key: 13
+      value: "10.240.1.76:8470"
+    }
+    tasks {
+      key: 14
+      value: "10.240.1.77:8470"
+    }
+    tasks {
+      key: 15
+      value: "10.240.1.75:8470"
+    }
+  }
+}
+, '_save_checkpoints_steps': 5000, '_num_ps_replicas': 0, '_keep_checkpoint_every_n_hours': 10000, '_task_id': 0, '_keep_checkpoint_max': 5, '_master': 'grpc://10.240.1.71:8470', '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f95136e2fd0>, '_eval_distribute': None, '_global_id_in_cluster': 0, '_log_step_count_steps': None, '_tpu_config': TPUConfig(iterations_per_loop=1251, num_shards=128, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None), '_save_checkpoints_secs': None, '_is_chief': True}
+I0517 21:03:04.039232 140278747670272 tpu_context.py:202] _TPUContext: eval_on_tpu True
+I0517 21:03:04.039881 140278747670272 resnet_main.py:598] Precision: bfloat16
+I0517 21:03:04.039963 140278747670272 resnet_main.py:617] Using dataset: gs://bert-pretrain-data/imagenet/imagenet-2012-tfrecord/
+I0517 21:03:04.153768 140278747670272 resnet_main.py:670] Training for 14074 steps (45.11 epochs in total). Current step 0.
+I0517 21:03:04.287334 140278747670272 tpu_system_metadata.py:59] Querying Tensorflow master (grpc://10.240.1.71:8470) for TPU system metadata.
+2019-05-17 21:03:04.291244: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+I0517 21:03:04.317764 140278747670272 tpu_system_metadata.py:120] Found TPU system:
+I0517 21:03:04.318128 140278747670272 tpu_system_metadata.py:121] *** Num TPU Cores: 128
+I0517 21:03:04.318591 140278747670272 tpu_system_metadata.py:122] *** Num TPU Workers: 16
+I0517 21:03:04.318648 140278747670272 tpu_system_metadata.py:124] *** Num TPU Cores Per Worker: 8
+I0517 21:03:04.318698 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 16373854852385502769)
+I0517 21:03:04.318955 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 7851232809657956842)
+I0517 21:03:04.319023 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 3492257327963188408)
+I0517 21:03:04.319076 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 6405244704554410990)
+I0517 21:03:04.319216 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 14312936656578755576)
+I0517 21:03:04.319271 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 3032442687871004822)
+I0517 21:03:04.319317 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 17572603725683599815)
+I0517 21:03:04.319367 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 15791552035838079477)
+I0517 21:03:04.319412 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 9119275223224416685)
+I0517 21:03:04.319456 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 10937072879063252850)
+I0517 21:03:04.319500 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 9470559600144123884)
+I0517 21:03:04.319545 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:CPU:0, CPU, -1, 9167949235530590732)
+I0517 21:03:04.319589 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:XLA_CPU:0, XLA_CPU, 17179869184, 9393418487701653382)
+I0517 21:03:04.319638 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:0, TPU, 17179869184, 9150347197338151201)
+I0517 21:03:04.319698 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:1, TPU, 17179869184, 1647055010443442502)
+I0517 21:03:04.319756 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:2, TPU, 17179869184, 8422734738692896982)
+I0517 21:03:04.319800 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:3, TPU, 17179869184, 13783300792966500583)
+I0517 21:03:04.319843 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:4, TPU, 17179869184, 8259056566324420147)
+I0517 21:03:04.319886 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:5, TPU, 17179869184, 9654009457826344400)
+I0517 21:03:04.319929 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:6, TPU, 17179869184, 999094525069215153)
+I0517 21:03:04.319972 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU:7, TPU, 17179869184, 9209775477333846585)
+I0517 21:03:04.320016 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:1/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 11957411583166240453)
+I0517 21:03:04.320059 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:CPU:0, CPU, -1, 15108355310585437964)
+I0517 21:03:04.320109 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:XLA_CPU:0, XLA_CPU, 17179869184, 3959447600881371121)
+I0517 21:03:04.320155 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:0, TPU, 17179869184, 10858906299703440014)
+I0517 21:03:04.320198 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:1, TPU, 17179869184, 2824508252444054282)
+I0517 21:03:04.320241 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:2, TPU, 17179869184, 1614528426371046898)
+I0517 21:03:04.320285 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:3, TPU, 17179869184, 3250224941760613522)
+I0517 21:03:04.320328 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:4, TPU, 17179869184, 14023069331560151083)
+I0517 21:03:04.320371 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:5, TPU, 17179869184, 15425201672372637978)
+I0517 21:03:04.320414 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:6, TPU, 17179869184, 18429382602045681448)
+I0517 21:03:04.320457 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU:7, TPU, 17179869184, 17846233397561456295)
+I0517 21:03:04.320499 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:2/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 15250628665374629259)
+I0517 21:03:04.320543 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:CPU:0, CPU, -1, 9473518241488368002)
+I0517 21:03:04.320585 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:XLA_CPU:0, XLA_CPU, 17179869184, 13395991067891544085)
+I0517 21:03:04.320639 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:0, TPU, 17179869184, 5811533190066945049)
+I0517 21:03:04.320683 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:1, TPU, 17179869184, 1580042525038013560)
+I0517 21:03:04.320743 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:2, TPU, 17179869184, 5890753118519144162)
+I0517 21:03:04.320787 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:3, TPU, 17179869184, 14148020998089830123)
+I0517 21:03:04.320830 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:4, TPU, 17179869184, 9258885694839613241)
+I0517 21:03:04.320872 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:5, TPU, 17179869184, 16457801972024882350)
+I0517 21:03:04.320914 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:6, TPU, 17179869184, 1883027263951105753)
+I0517 21:03:04.320957 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU:7, TPU, 17179869184, 15683512309821184055)
+I0517 21:03:04.321000 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:4/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 7617084100175178929)
+I0517 21:03:04.321043 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:CPU:0, CPU, -1, 7918155767266485907)
+I0517 21:03:04.321085 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:XLA_CPU:0, XLA_CPU, 17179869184, 4401690274532997473)
+I0517 21:03:04.321134 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:0, TPU, 17179869184, 13991502749670145543)
+I0517 21:03:04.321178 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:1, TPU, 17179869184, 2626514658524675165)
+I0517 21:03:04.321221 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:2, TPU, 17179869184, 15650000145408457539)
+I0517 21:03:04.321272 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:3, TPU, 17179869184, 5421513187620673231)
+I0517 21:03:04.321316 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:4, TPU, 17179869184, 13764497131420221575)
+I0517 21:03:04.321360 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:5, TPU, 17179869184, 5102913406520971571)
+I0517 21:03:04.321410 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:6, TPU, 17179869184, 17241493297845064255)
+I0517 21:03:04.321460 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU:7, TPU, 17179869184, 1309466646181953139)
+I0517 21:03:04.321504 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:3/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 15266682567054795061)
+I0517 21:03:04.321552 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:CPU:0, CPU, -1, 3614149172371501163)
+I0517 21:03:04.321596 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:XLA_CPU:0, XLA_CPU, 17179869184, 13650336404808576287)
+I0517 21:03:04.321650 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:0, TPU, 17179869184, 317019457492666440)
+I0517 21:03:04.321695 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:1, TPU, 17179869184, 1828921427651186539)
+I0517 21:03:04.321755 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:2, TPU, 17179869184, 17313140437247847107)
+I0517 21:03:04.321799 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:3, TPU, 17179869184, 16189168802990202778)
+I0517 21:03:04.321888 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:4, TPU, 17179869184, 11158699983433117636)
+I0517 21:03:04.321932 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:5, TPU, 17179869184, 12548759607937592987)
+I0517 21:03:04.321981 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:6, TPU, 17179869184, 2176517689683936175)
+I0517 21:03:04.322026 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU:7, TPU, 17179869184, 7309642020761744194)
+I0517 21:03:04.322068 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:6/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 17955024233938738137)
+I0517 21:03:04.322123 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:CPU:0, CPU, -1, 15706010243202227947)
+I0517 21:03:04.322168 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:XLA_CPU:0, XLA_CPU, 17179869184, 2703939893526806847)
+I0517 21:03:04.322212 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:0, TPU, 17179869184, 13317692724629806193)
+I0517 21:03:04.322259 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:1, TPU, 17179869184, 13897612542669867451)
+I0517 21:03:04.322302 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:2, TPU, 17179869184, 17507574286771752959)
+I0517 21:03:04.322344 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:3, TPU, 17179869184, 13710550706370166389)
+I0517 21:03:04.322386 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:4, TPU, 17179869184, 14628608791868990461)
+I0517 21:03:04.322428 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:5, TPU, 17179869184, 8689059586647854614)
+I0517 21:03:04.322469 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:6, TPU, 17179869184, 9611513751693611423)
+I0517 21:03:04.322511 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU:7, TPU, 17179869184, 13088844707674338322)
+I0517 21:03:04.322554 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:5/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 608162979316154712)
+I0517 21:03:04.322597 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:CPU:0, CPU, -1, 17057730765131437685)
+I0517 21:03:04.322650 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:XLA_CPU:0, XLA_CPU, 17179869184, 5115711572364283919)
+I0517 21:03:04.322694 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:0, TPU, 17179869184, 9039329294689792212)
+I0517 21:03:04.322749 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:1, TPU, 17179869184, 13349240580332943441)
+I0517 21:03:04.322793 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:2, TPU, 17179869184, 17477877740656003348)
+I0517 21:03:04.322836 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:3, TPU, 17179869184, 17485513074166801502)
+I0517 21:03:04.322878 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:4, TPU, 17179869184, 12338041025200114314)
+I0517 21:03:04.322920 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:5, TPU, 17179869184, 449522461865539464)
+I0517 21:03:04.322963 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:6, TPU, 17179869184, 3058335620460648623)
+I0517 21:03:04.323006 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU:7, TPU, 17179869184, 8033890809950011024)
+I0517 21:03:04.323048 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:7/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 10683343909292386825)
+I0517 21:03:04.323090 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:CPU:0, CPU, -1, 1616262774676718807)
+I0517 21:03:04.323140 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:XLA_CPU:0, XLA_CPU, 17179869184, 10343372766973964332)
+I0517 21:03:04.323184 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:0, TPU, 17179869184, 10495283908138989891)
+I0517 21:03:04.323226 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:1, TPU, 17179869184, 12986637534564229405)
+I0517 21:03:04.323269 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:2, TPU, 17179869184, 5591764283330928282)
+I0517 21:03:04.323310 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:3, TPU, 17179869184, 13976606324510186128)
+I0517 21:03:04.323352 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:4, TPU, 17179869184, 11525269855429302351)
+I0517 21:03:04.323395 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:5, TPU, 17179869184, 8960118812284217061)
+I0517 21:03:04.323436 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:6, TPU, 17179869184, 10092572524185534651)
+I0517 21:03:04.323478 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU:7, TPU, 17179869184, 15634799254757707721)
+I0517 21:03:04.323520 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:8/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 4930791282569038955)
+I0517 21:03:04.323562 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:CPU:0, CPU, -1, 437172656937952423)
+I0517 21:03:04.323614 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:XLA_CPU:0, XLA_CPU, 17179869184, 5110586036334205334)
+I0517 21:03:04.323658 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:0, TPU, 17179869184, 14998358331904447049)
+I0517 21:03:04.323715 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:1, TPU, 17179869184, 17615087511927749684)
+I0517 21:03:04.323761 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:2, TPU, 17179869184, 5321513532080470011)
+I0517 21:03:04.323804 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:3, TPU, 17179869184, 12651212862491919040)
+I0517 21:03:04.323851 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:4, TPU, 17179869184, 15188586476760266067)
+I0517 21:03:04.323894 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:5, TPU, 17179869184, 8239458461374801840)
+I0517 21:03:04.323936 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:6, TPU, 17179869184, 13731183988100484418)
+I0517 21:03:04.323980 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU:7, TPU, 17179869184, 272475919409566514)
+I0517 21:03:04.324023 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:9/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 11373834917005733787)
+I0517 21:03:04.324065 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:CPU:0, CPU, -1, 3576688749931861718)
+I0517 21:03:04.324120 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:XLA_CPU:0, XLA_CPU, 17179869184, 9607197719789317791)
+I0517 21:03:04.324165 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:0, TPU, 17179869184, 888429095838306889)
+I0517 21:03:04.324214 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:1, TPU, 17179869184, 14119166637733805707)
+I0517 21:03:04.324258 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:2, TPU, 17179869184, 348968468751728499)
+I0517 21:03:04.324301 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:3, TPU, 17179869184, 15959288711181891401)
+I0517 21:03:04.324343 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:4, TPU, 17179869184, 5570021345825860771)
+I0517 21:03:04.324387 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:5, TPU, 17179869184, 8508538817953124928)
+I0517 21:03:04.324429 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:6, TPU, 17179869184, 8069595386874230216)
+I0517 21:03:04.324472 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU:7, TPU, 17179869184, 1838745278834239236)
+I0517 21:03:04.324514 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:10/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 2120978672735340927)
+I0517 21:03:04.324557 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:CPU:0, CPU, -1, 785540181122017722)
+I0517 21:03:04.324608 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:XLA_CPU:0, XLA_CPU, 17179869184, 17950285196448165741)
+I0517 21:03:04.324653 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:0, TPU, 17179869184, 16415061929383866425)
+I0517 21:03:04.324696 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:1, TPU, 17179869184, 6527729763412980420)
+I0517 21:03:04.324750 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:2, TPU, 17179869184, 16481135133574130967)
+I0517 21:03:04.324794 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:3, TPU, 17179869184, 1381702746307255940)
+I0517 21:03:04.324838 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:4, TPU, 17179869184, 5568224764222445823)
+I0517 21:03:04.324881 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:5, TPU, 17179869184, 11165793030354217613)
+I0517 21:03:04.324924 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:6, TPU, 17179869184, 10827811945642492329)
+I0517 21:03:04.324967 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU:7, TPU, 17179869184, 14787126918922581201)
+I0517 21:03:04.325015 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:11/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 1132597328293033866)
+I0517 21:03:04.325078 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:CPU:0, CPU, -1, 197231508326653671)
+I0517 21:03:04.325129 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:XLA_CPU:0, XLA_CPU, 17179869184, 9739648352894088193)
+I0517 21:03:04.325175 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:0, TPU, 17179869184, 7808044705283296622)
+I0517 21:03:04.325218 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:1, TPU, 17179869184, 8078013698872429694)
+I0517 21:03:04.325262 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:2, TPU, 17179869184, 5973741856898209533)
+I0517 21:03:04.325312 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:3, TPU, 17179869184, 16848602642393747037)
+I0517 21:03:04.325355 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:4, TPU, 17179869184, 5219215206472968317)
+I0517 21:03:04.325398 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:5, TPU, 17179869184, 9456601785104742928)
+I0517 21:03:04.325441 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:6, TPU, 17179869184, 9831051453581915664)
+I0517 21:03:04.325482 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU:7, TPU, 17179869184, 12971717448038268798)
+I0517 21:03:04.325525 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:13/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 11274145837669195227)
+I0517 21:03:04.325575 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:CPU:0, CPU, -1, 16892437005381176038)
+I0517 21:03:04.325621 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:XLA_CPU:0, XLA_CPU, 17179869184, 15936102955712097226)
+I0517 21:03:04.325664 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:0, TPU, 17179869184, 6299104837330061996)
+I0517 21:03:04.325718 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:1, TPU, 17179869184, 1470477354348099543)
+I0517 21:03:04.325762 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:2, TPU, 17179869184, 11692084079803324935)
+I0517 21:03:04.325805 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:3, TPU, 17179869184, 4812347481749561202)
+I0517 21:03:04.325881 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:4, TPU, 17179869184, 12532981620677992572)
+I0517 21:03:04.325924 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:5, TPU, 17179869184, 4210545997246777476)
+I0517 21:03:04.325973 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:6, TPU, 17179869184, 14890956731528792911)
+I0517 21:03:04.326019 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU:7, TPU, 17179869184, 11109329499886577311)
+I0517 21:03:04.326062 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:15/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 5045952213248642047)
+I0517 21:03:04.326110 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:CPU:0, CPU, -1, 6831509412402006814)
+I0517 21:03:04.326154 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:XLA_CPU:0, XLA_CPU, 17179869184, 13477351524781224383)
+I0517 21:03:04.326197 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:0, TPU, 17179869184, 16854337242568438404)
+I0517 21:03:04.326241 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:1, TPU, 17179869184, 4697737298978059558)
+I0517 21:03:04.326291 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:2, TPU, 17179869184, 17005309874262480196)
+I0517 21:03:04.326335 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:3, TPU, 17179869184, 9982444392923649324)
+I0517 21:03:04.326378 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:4, TPU, 17179869184, 6276273288883145637)
+I0517 21:03:04.326422 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:5, TPU, 17179869184, 6425778833353234796)
+I0517 21:03:04.326465 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:6, TPU, 17179869184, 8683380700868069387)
+I0517 21:03:04.326507 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU:7, TPU, 17179869184, 5622299258441899311)
+I0517 21:03:04.326551 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:14/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 7552782986847496583)
+I0517 21:03:04.326600 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:CPU:0, CPU, -1, 13548635612557103264)
+I0517 21:03:04.326646 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:XLA_CPU:0, XLA_CPU, 17179869184, 18213278566338182253)
+I0517 21:03:04.326689 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:0, TPU, 17179869184, 615866209061641194)
+I0517 21:03:04.326745 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:1, TPU, 17179869184, 12076979745290806950)
+I0517 21:03:04.326788 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:2, TPU, 17179869184, 15335208903611821904)
+I0517 21:03:04.326831 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:3, TPU, 17179869184, 4747765585531864312)
+I0517 21:03:04.326873 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:4, TPU, 17179869184, 13817082751894346080)
+I0517 21:03:04.326916 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:5, TPU, 17179869184, 3144408549675692719)
+I0517 21:03:04.326965 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:6, TPU, 17179869184, 9124125666651565394)
+I0517 21:03:04.327008 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU:7, TPU, 17179869184, 4832912510880171346)
+I0517 21:03:04.327056 140278747670272 tpu_system_metadata.py:126] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:12/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 8434282019836179659)
+W0517 21:03:04.332753 140278747670272 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+I0517 21:03:04.346511 140278747670272 estimator.py:1111] Calling model_fn.
+W0517 21:03:04.360317 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:294: DatasetV1.shard (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `dataset.apply(tf.data.experimental.filter_for_shard(...))`.
+W0517 21:03:04.384077 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:307: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0517 21:03:04.399279 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:311: shuffle_and_repeat (from tensorflow.contrib.data.python.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.shuffle_and_repeat(...)`.
+W0517 21:03:04.401943 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/imagenet_input.py:177: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+W0517 21:03:04.415516 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_preprocessing.py:66: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W0517 21:03:07.753608 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:208: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0517 21:03:07.772743 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:67: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+W0517 21:03:07.822775 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:410: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0517 21:03:11.535665 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:439: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.average_pooling2d instead.
+W0517 21:03:11.540868 140278747670272 deprecation.py:323] From /home/yangyouucb/tpu-1/models/official/resnet/resnet_model.py:446: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0517 21:03:11.611900 140278747670272 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0517 21:03:11.752572 140278747670272 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+I0517 21:03:11.760411 140278747670272 lars_util.py:93] ***************** I am using LARS optimizer *****************
+I0517 21:03:20.894124 140278747670272 basic_session_run_hooks.py:527] Create CheckpointSaverHook.
+I0517 21:03:21.204298 140278747670272 estimator.py:1113] Done calling model_fn.
+I0517 21:03:24.611258 140278747670272 tpu_estimator.py:447] TPU job name worker
+I0517 21:03:25.663809 140278747670272 monitored_session.py:222] Graph was finalized.
+I0517 21:03:30.646024 140278747670272 session_manager.py:491] Running local_init_op.
+I0517 21:03:30.836206 140278747670272 session_manager.py:493] Done running local_init_op.
+I0517 21:03:40.850248 140278747670272 basic_session_run_hooks.py:594] Saving checkpoints for 0 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0517 21:03:49.412733 140278747670272 util.py:51] Initialized dataset iterators in 0 seconds
+I0517 21:03:49.413545 140278747670272 session_support.py:345] Installing graceful shutdown hook.
+2019-05-17 21:03:49.414111: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+I0517 21:03:49.428197 140278747670272 session_support.py:102] Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:1/device:CPU:0', '/job:worker/replica:0/task:3/device:CPU:0', '/job:worker/replica:0/task:7/device:CPU:0', '/job:worker/replica:0/task:4/device:CPU:0', '/job:worker/replica:0/task:2/device:CPU:0', '/job:worker/replica:0/task:6/device:CPU:0', '/job:worker/replica:0/task:5/device:CPU:0', '/job:worker/replica:0/task:9/device:CPU:0', '/job:worker/replica:0/task:8/device:CPU:0', '/job:worker/replica:0/task:11/device:CPU:0', '/job:worker/replica:0/task:10/device:CPU:0', '/job:worker/replica:0/task:12/device:CPU:0', '/job:worker/replica:0/task:14/device:CPU:0', '/job:worker/replica:0/task:13/device:CPU:0', '/job:worker/replica:0/task:15/device:CPU:0']
+I0517 21:03:49.860890 140278747670272 session_support.py:130] Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+I0517 21:03:49.873730 140278747670272 tpu_estimator.py:504] Init TPU system
+I0517 21:04:01.263658 140278747670272 tpu_estimator.py:510] Initialized TPU in 11 seconds
+I0517 21:04:01.733053 140277247371008 tpu_estimator.py:463] Starting infeed thread controller.
+I0517 21:04:01.733488 140277238978304 tpu_estimator.py:482] Starting outfeed thread controller.
+I0517 21:04:01.937108 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:04:01.937967 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:05:33.620770 140278747670272 basic_session_run_hooks.py:249] loss = 4.505075, step = 1251
+I0517 21:05:33.622920 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:05:33.623175 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:06:37.404186 140278747670272 basic_session_run_hooks.py:247] loss = 4.1166267, step = 2502 (63.783 sec)
+I0517 21:06:37.406005 140278747670272 tpu_estimator.py:1858] global_step/sec: 19.6132
+I0517 21:06:37.406996 140278747670272 tpu_estimator.py:1859] examples/sec: 80335.6
+I0517 21:06:37.408397 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:06:37.408661 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:07:38.468654 140278747670272 basic_session_run_hooks.py:247] loss = 3.5264645, step = 3753 (61.064 sec)
+I0517 21:07:38.470373 140278747670272 tpu_estimator.py:1858] global_step/sec: 20.4866
+I0517 21:07:39.053064 140278747670272 tpu_estimator.py:1859] examples/sec: 83912.9
+I0517 21:07:39.055552 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:07:39.055936 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:08:40.341993 140278747670272 basic_session_run_hooks.py:594] Saving checkpoints for 5004 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0517 21:08:48.068278 140278747670272 basic_session_run_hooks.py:247] loss = 2.34133, step = 5004 (69.600 sec)
+I0517 21:08:48.070143 140278747670272 tpu_estimator.py:1858] global_step/sec: 17.9742
+I0517 21:08:48.070802 140278747670272 tpu_estimator.py:1859] examples/sec: 73622.3
+I0517 21:08:48.072193 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:08:48.072409 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:09:49.222588 140278747670272 basic_session_run_hooks.py:247] loss = 2.3953652, step = 6255 (61.154 sec)
+I0517 21:09:49.224404 140278747670272 tpu_estimator.py:1858] global_step/sec: 20.4565
+I0517 21:09:49.912024 140278747670272 tpu_estimator.py:1859] examples/sec: 83789.8
+I0517 21:09:49.914271 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:09:49.914592 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:10:51.038899 140278747670272 basic_session_run_hooks.py:247] loss = 2.591837, step = 7506 (61.816 sec)
+I0517 21:10:51.040752 140278747670272 tpu_estimator.py:1858] global_step/sec: 20.2373
+I0517 21:10:51.041206 140278747670272 tpu_estimator.py:1859] examples/sec: 82892.1
+I0517 21:10:51.042507 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:10:51.042690 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:11:52.820550 140278747670272 basic_session_run_hooks.py:247] loss = 1.9421947, step = 8757 (61.782 sec)
+I0517 21:11:52.822430 140278747670272 tpu_estimator.py:1858] global_step/sec: 20.2487
+I0517 21:11:52.823044 140278747670272 tpu_estimator.py:1859] examples/sec: 82938.8
+I0517 21:11:52.824393 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:11:52.824624 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:12:53.915297 140278747670272 basic_session_run_hooks.py:594] Saving checkpoints for 10008 into gs://bert-pretrain-data/imagenet/infer/model.ckpt.
+I0517 21:13:00.713957 140278747670272 basic_session_run_hooks.py:247] loss = 1.5720952, step = 10008 (67.893 sec)
+I0517 21:13:00.715836 140278747670272 tpu_estimator.py:1858] global_step/sec: 18.4259
+I0517 21:13:00.716085 140278747670272 tpu_estimator.py:1859] examples/sec: 75472.6
+I0517 21:13:00.717676 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:13:00.718004 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
+I0517 21:14:01.883839 140278747670272 basic_session_run_hooks.py:247] loss = 1.3530488, step = 11259 (61.170 sec)
+I0517 21:14:01.885670 140278747670272 tpu_estimator.py:1858] global_step/sec: 20.4513
+I0517 21:14:02.558218 140278747670272 tpu_estimator.py:1859] examples/sec: 83768.6
+I0517 21:14:02.560197 140278747670272 tpu_estimator.py:536] Enqueue next (1251) batch(es) of data to infeed.
+I0517 21:14:02.560483 140278747670272 tpu_estimator.py:540] Dequeue next (1251) batch(es) of data from outfeed.
