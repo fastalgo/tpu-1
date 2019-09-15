@@ -1,5 +1,9 @@
 # ResNet-50 on TPU
 
+# How to reproduce?
+
+Just hit ./run.sh
+
 ## Prerequisites
 
 If you want to train the model on Cloud TPU through the managed service
