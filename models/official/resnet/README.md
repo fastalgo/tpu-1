@@ -1,6 +1,6 @@
 # ResNet-50 on TPU
 
-# How to reproduce?
+## How to reproduce?
 
 Just hit ./run.sh
 
